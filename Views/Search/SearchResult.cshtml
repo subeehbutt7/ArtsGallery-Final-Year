@@ -1,0 +1,57 @@
+﻿@model ArtGalleryFinal.Models.SearchModel
+@{
+    ViewData["Title"] = "Search Result";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Search Results for "@Model.Query"</h1>
+
+@if (TempData["Error"] != null)
+{
+    <p style="color: red;">@TempData["Error"]</p>
+}
+
+@if (Model.Artists.Any())
+{
+    <h2>Artists</h2>
+    <ul>
+        @foreach (var artist in Model.Artists)
+        {
+            <li>
+                <a href="@Url.Action("FilterByArtist", "Search", new { artistId = artist.ArtistId })">
+                    @artist.Name
+                </a>
+            </li>
+        }
+    </ul>
+}
+
+@if (Model.Artworks.Any())
+{
+    <h2>Artworks</h2>
+    <ul>
+        @foreach (var artwork in Model.Artworks)
+        {
+            <li>
+                <a href="@Url.Action("ViewArtwork", "Search", new { artworkId = artwork.ArtId })">
+                    @artwork.ArtName
+                </a>
+            </li>
+        }
+    </ul>
+}
+
+@if (Model.Categories.Any())
+{
+    <h2>Categories</h2>
+    <ul>
+        @foreach (var category in Model.Categories)
+        {
+            <li>
+                <a href="@Url.Action("FilterByCategory", "Search", new { categoryId = category.CategoryId })">
+                    @category.CategoryName
+                </a>
+            </li>
+        }
+    </ul>
+}

@@ -1,0 +1,35 @@
+﻿@model ArtGalleryFinal.Models.Customer
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Pages/Shared/_Layout.cshtml"; // Ensure this path is correct
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Your Profile</h1>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                    <p><strong>Email:</strong> @Model.Email</p>
+                    <p><strong>PhoneNo:</strong> @Model.PhoneNo</p>
+                    <p><strong>Address:</strong> @Model.Address</p>
+                    <p><strong>Country:</strong> @Model.Country</p>
+
+                    <!-- Edit Button -->
+                    <a href="/Customer/EditProfile" class="btn btn-primary btn-block mt-3">
+                        Edit Profile
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

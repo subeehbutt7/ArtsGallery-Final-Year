@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ArtGalleryFinal.Models.Artwork>
+
+@{
+    ViewData["Title"] = "Manage My Artworks";
+    Layout = "~/Pages/Shared/_Layout.cshtml"; // Ensure this layout file exists
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Manage My Artworks</h1>
+
+    <!-- Success Message -->
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <span>@TempData["Message"]</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Error Message -->
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span>@TempData["Error"]</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Artworks Table -->
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price (RS)</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Admin Approval</th>
+                    <th scope="col" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="9" class="text-center text-muted">No artworks found.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var art in Model)
+                    {
+                        <tr>
+                            <td>@art.Title</td>
+                            <td>@art.Description</td>
+                            <td>@art.Price</td>
+                            <td>@(art.Quantity ?? 0)</td>
+                            <td>@(art.Category?.CategoryName ?? "-")</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(art.ImageUrl))
+                                {
+                                    <img src="@art.ImageUrl" alt="@art.Title" class="img-thumbnail" style="width: 100px; height: auto;" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted">No Image</span>
+                                }
+                            </td>
+                            <td>
+                                <span class="badge @(art.IsSoldOut ? "bg-danger" : "bg-success")">@(art.IsSoldOut ? "Sold Out" : "Available")</span>
+                            </td>
+                            <td>@art.AdminApproved</td>
+                            <td class="text-center">
+                                <!-- Edit Button -->
+                                <a href="/Artwork/EditArtwork/@art.ArtId" class="btn btn-primary btn-sm me-1">
+                                    <i class="bi bi-pencil-square"></i> Edit
+                                </a>
+
+                                <!-- Delete Button -->
+                                <form action="DeleteArtwork/@art.ArtId" method="post" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this artwork?');">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add New Art Button -->
+    <div class="text-center mt-4">
+        <a href="/Artwork/AddArtwork" class="btn btn-success btn-lg">
+            <i class="bi bi-plus-circle"></i> Add New Art
+        </a>
+    </div>
+</div>

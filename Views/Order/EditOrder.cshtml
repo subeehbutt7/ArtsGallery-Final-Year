@@ -1,0 +1,32 @@
+﻿@model ArtGalleryFinal.Models.OrderViewModel
+@{
+	ViewData["Title"] = "Edit Order";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Edit Order</h2>
+    
+    <form action="/Order/EditOrder" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="OrderId" value="@Model.OrderId" />
+        <input type="hidden"asp-for="OrderStatus" value="Pending"/>
+
+        <div class="mb-3">
+            <label for="Quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="Quantity" name="Quantity" value="@Model.Quantity" min="1" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="Address" name="Address" value="@Model.Address" required />
+        </div>
+        <div class="mb-3">
+            <label for="Country" class="form-label">Country</label>
+            <input type="text" class="form-control" id="Country" name="Country" value="@Model.Country" required />
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Update Order</button>
+    </form>
+</div>

@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left Column: Registration Form -->
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h1 class="text-center mb-4">Create Your Account</h1>
+
+                <!-- Success and Error Messages -->
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger text-center">
+                        @TempData["Error"]
+                    </div>
+                }
+
+                <!-- Registration Form -->
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <!-- Role Selection -->
+                    <div class="form-group mb-3">
+                        <label for="role" class="form-label">Register As:</label>
+                        <select name="role" id="role" class="form-control" required>
+                            <option value="" disabled selected>-- Select your role --</option>
+                            <option value="Artist">Artist</option>
+                            <option value="Customer">Customer</option>
+                        </select>
+                    </div>
+
+                    <!-- Name Field -->
+                    <div class="form-group mb-3">
+                        <label for="Name" class="form-label">Name:</label>
+                        @Html.TextBox("name", "", new { @class = "form-control", placeholder = "Enter your name", required = "required" })
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="form-group mb-3">
+                        <label for="Email" class="form-label">Email:</label>
+                        @Html.TextBox("email", "", new { @class = "form-control", placeholder = "Enter your email", required = "required" })
+                    </div>
+
+                    <!-- Phone Number Field -->
+                    <div class="form-group mb-3">
+                        <label for="PhoneNo" class="form-label">Phone Number:</label>
+                        @Html.TextBox("phoneNo", "", new { @class = "form-control", placeholder = "Enter your phone number", required = "required" })
+                    </div>
+
+                    <!-- Address Field -->
+                    <div class="form-group mb-3">
+                        <label for="Address" class="form-label">Address:</label>
+                        @Html.TextBox("address", "", new { @class = "form-control", placeholder = "Enter your address", required = "required" })
+                    </div>
+
+                    <!-- Country Field -->
+                    <div class="form-group mb-3">
+                        <label for="Country" class="form-label">Country:</label>
+                        @Html.TextBox("country", "", new { @class = "form-control", placeholder = "Enter your country", required = "required" })
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group mb-3">
+                        <label for="Password" class="form-label">Password:</label>
+                        @Html.Password("password", "", new { @class = "form-control", placeholder = "Enter your password", required = "required" })
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="form-group mb-3">
+                        <label for="ConfirmPassword" class="form-label">Confirm Password:</label>
+                        @Html.Password("confirmPassword", "", new { @class = "form-control", placeholder = "Re-enter your password", required = "required" })
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Register</button>
+                }
+            </div>
+        </div>
+
+        <!-- Right Column: Art Gallery Message -->
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h2 class="text-center">Welcome to Arts Gallery</h2>
+                <p class="text-center">
+                    Discover a world of creativity and inspiration at Arts Gallery. Our platform connects artists and art enthusiasts, offering high-quality artworks, exhibitions, and opportunities for emerging talent. Join us and explore the vibrant beauty of art!
+                </p>
+                <p class="text-center">
+                    Whether you're an artist looking to showcase your work or an art lover searching for that perfect piece, we are here to make art accessible and enjoyable for everyone.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model ArtGalleryFinal.Models.JazzCashPaymentModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting to JazzCash...</title>
+</head>
+<body>
+    <div style="text-align:center; margin-top:80px; font-family:sans-serif;">
+        <p>Redirecting to JazzCash secure payment page, please wait...</p>
+    </div>
+
+    <form id="jazzcashForm" method="post" action="@ViewBag.GatewayUrl">
+        @foreach (var prop in Model.GetType().GetProperties())
+        {
+            <input type="hidden" name="@prop.Name" value="@prop.GetValue(Model)" />
+        }
+    </form>
+    <script>
+        document.getElementById('jazzcashForm').submit();
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model ArtGalleryFinal.Models.Customer
+
+@{
+    ViewData["Title"] = "Edit Profile";
+    Layout = "~/Pages/Shared/_Layout.cshtml"; // Ensure this path is correct
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Edit Your Profile</h1>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    @using (Html.BeginForm("EditProfile", "Customer", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group mb-3">
+            <label for="Name">Name</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Enter your name" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="PhoneNo">Phone Number</label>
+            @Html.TextBoxFor(m => m.PhoneNo, new { @class = "form-control", placeholder = "Enter your phone number" })
+            @Html.ValidationMessageFor(m => m.PhoneNo, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Address">Address</label>
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Enter your address" })
+            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Country">Country</label>
+            @Html.TextBoxFor(m => m.Country, new { @class = "form-control", placeholder = "Enter your country" })
+            @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+    }
+</div>

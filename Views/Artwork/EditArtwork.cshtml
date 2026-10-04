@@ -1,0 +1,86 @@
+﻿@model ArtGalleryFinal.Models.Artwork
+
+@{
+    ViewData["Title"] = "Edit Artwork";
+    Layout = "~/Pages/Shared/_Layout.cshtml"; // Ensure the layout file exists
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Edit Artwork</h1>
+
+    <!-- Error Message -->
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span>@TempData["Error"]</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Edit Artwork Form -->
+    <form asp-action="EditArtwork" asp-controller="Artwork" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="ArtId" value="@Model.ArtId" /> <!-- Hidden field for ArtId -->
+        <input type="hidden" name="ArtistId" value="@Model.ArtistId" /> <!-- Hidden field for ArtistId -->
+
+        <div class="mb-3">
+            <label for="ArtName" class="form-label">Art Name</label>
+            <input type="text" class="form-control" id="ArtName" name="ArtName" value="@Model.ArtName" required />
+        </div>
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" required />
+        </div>
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea class="form-control" id="Description" name="Description" rows="3" required>@Model.Description</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="Price" class="form-label">Price (RS)</label>
+            <input type="number" class="form-control" id="Price" name="Price" value="@Model.Price" required />
+        </div>
+        <div class="mb-3">
+            <label for="CategoryId" class="form-label">Category</label>
+            <select class="form-select" id="CategoryId" name="CategoryId" required>
+                <option value="" disabled>Select a category</option>
+                @foreach (var c in (ViewBag.Categories as List<ArtGalleryFinal.Models.ArtCategory> ?? new()))
+                {
+                    <option value="@c.CategoryId" selected="@(Model.CategoryId == c.CategoryId)">@c.CategoryName</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="Quantity" class="form-label">Quantity (copies available)</label>
+            <input type="number" class="form-control" id="Quantity" name="Quantity" value="@(Model.Quantity ?? 0)" min="0" required />
+            <small class="text-muted">Status changes automatically: 0 = Sold Out (red), more than 0 = Available (green).</small>
+            <div class="mt-2">
+                Current status:
+                <span class="badge @(Model.IsSoldOut ? "bg-danger" : "bg-success")">@(Model.IsSoldOut ? "Sold Out" : "Available")</span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="ImageFile" class="form-label">Upload New Image (Optional)</label>
+            <input type="file" class="form-control-file" id="ImageUrl" name="ImageUrl" accept="image/*" />
+            <p class="text-muted mt-2">
+                Current Image:
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Model.ImageUrl" alt="@Model.Title" class="img-thumbnail" style="width: 100px; height: auto;" />
+                }
+                else
+                {
+                    <span class="text-muted">No image uploaded.</span>
+                }
+            </p>
+        </div>
+       
+        <button type="submit" class="btn btn-primary">
+            <i class="bi bi-pencil-square"></i> Save Changes
+        </button>
+        <a href="@Url.Action("ManageMyArtworks", "Artwork")" class="btn btn-secondary">
+            <i class="bi bi-x-circle"></i> Cancel
+        </a>
+    </form>
+</div>

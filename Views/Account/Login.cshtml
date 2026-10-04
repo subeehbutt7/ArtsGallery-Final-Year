@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Left Column: Login Form -->
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h2 class="text-center mb-4">Login to Art Gallery</h2>
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger text-center">
+                        @TempData["Error"]
+                    </div>
+                }
+
+                <!-- Login Form -->
+                <form asp-controller="Account" asp-action="Login" method="post" class="p-3">
+                    <!-- Email Field -->
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="username" name="username" placeholder="Enter your email" required />
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required />
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Login</button>
+                    </div>
+                </form>
+
+                <!-- Forgot Password Link -->
+                <div class="text-center mt-3">
+                    <a href="/Account/ForgotPassword" class="text-decoration-none">Forgot Password?</a>
+                </div>
+
+                <!-- Register Link -->
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="/Account/Register" class="text-decoration-none">Register here</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Art Gallery Message -->
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h2 class="text-center">Welcome Back to Art Gallery</h2>
+                <p class="text-center">
+                    Immerse yourself in the world of creativity. Login to explore exquisite artworks, manage your profile, and connect with talented artists. Your journey into art awaits!
+                </p>
+                <p class="text-center">
+                    Discover exhibitions, contribute your passion, and experience the vibrant community of Art Gallery. Let us inspire you to embrace art!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

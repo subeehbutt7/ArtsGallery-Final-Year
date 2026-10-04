@@ -1,0 +1,33 @@
+@model IEnumerable<ArtGalleryFinal.Models.Complaint>
+
+@{
+    ViewData["Title"] = "Complaints";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    var names = ViewBag.Names as Dictionary<int, string?> ?? new();
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Customer Complaints</h1>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr><th>Date</th><th>Customer</th><th>Artwork</th><th>Complaint</th></tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr><td colspan="4" class="text-center text-muted">No complaints.</td></tr>
+                }
+                @foreach (var c in Model)
+                {
+                    <tr>
+                        <td>@c.CreatedDate.ToString("dd MMM yyyy HH:mm")</td>
+                        <td>@(c.CustomerId != null && names.ContainsKey(c.CustomerId.Value) ? names[c.CustomerId.Value] : "Unknown")</td>
+                        <td>@(c.ArtId != null ? "#" + c.ArtId : "-")</td>
+                        <td>@c.Message</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

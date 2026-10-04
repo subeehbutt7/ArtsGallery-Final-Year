@@ -1,0 +1,103 @@
+﻿@model ArtGalleryFinal.Models.Artwork
+
+@{
+    ViewData["Title"] = "Add New Art";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Add Your Art</h1>
+    <form asp-action="AddArt" asp-controller="Artwork" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <!-- Title Field -->
+            <div class="col-md-6 form-group">
+                <label for="Title">Title <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="Title" name="Title" value="@Model?.Title" placeholder="Enter the title of your art" required />
+                <small class="form-text text-muted">Example: Starry Night</small>
+            </div>
+
+            <!-- Art Name Field -->
+            <div class="col-md-6 form-group">
+                <label for="ArtName">Art Name</label>
+                <input type="text" class="form-control" id="ArtName" name="ArtName" value="@Model?.ArtName" placeholder="Enter the art name (optional)" />
+                <small class="form-text text-muted">Example: Painting or Portrait</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Description Field -->
+            <div class="col-md-12 form-group">
+                <label for="Description">Description</label>
+                <textarea class="form-control" id="Description" name="Description" rows="4" placeholder="Describe your art">@Model?.Description</textarea>
+                <small class="form-text text-muted">Provide details about your art, its inspiration, or story.</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Price Field -->
+            <div class="col-md-6 form-group">
+                <label for="Price">Price (in Rs) <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="Price" name="Price" value="@Model?.Price" placeholder="Enter the price" min="0" required />
+            </div>
+
+            <!-- Image Upload Field -->
+            <div class="col-md-6 form-group">
+                <label for="ImageUrl">Upload Art Image</label>
+                <input type="file" class="form-control-file" id="ImageUrl" name="ImageUrl" accept="image/*" />
+                <small class="form-text text-muted">Supported formats: JPG, PNG, JPEG</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Quantity Field: how many copies of this art the artist has -->
+            <div class="col-md-6 form-group">
+                <label for="Quantity">Quantity <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="Quantity" name="Quantity" value="@(Model?.Quantity ?? 1)" min="1" required />
+                <small class="form-text text-muted">How many copies of this artwork do you have?</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Category Selection -->
+            <div class="col-md-6 form-group">
+                <label for="CategoryId">Category <span class="text-danger">*</span></label>
+                <select class="form-control" id="CategoryId" name="CategoryId" required>
+                    <option value="" disabled selected>Select a category</option>
+                    @foreach (var c in (ViewBag.Categories as List<ArtGalleryFinal.Models.ArtCategory> ?? new()))
+                    {
+                        <option value="@c.CategoryId">@c.CategoryName</option>
+                    }
+                </select>
+            </div>
+
+            <!-- Status Field -->
+            <div class="col-md-6 form-group">
+                <label for="Status">Status <span class="text-danger">*</span></label>
+                <select class="form-control" id="Status" name="Status" required>
+                    <option value="" disabled selected>Select status</option>
+                    <option value="For Sale">For Sale</option>
+                    <option value="Sold">Sold</option>
+                </select>
+                <small class="form-text text-muted">Specify if the artwork is for sale or sold.</small>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Admin Approval Field -->
+            <div class="col-md-6 form-group">
+                <label for="AdminApproved">Admin Approval</label>
+                <select class="form-control" id="AdminApproved" name="AdminApproved" disabled>
+                    <option value="Pending" selected>Pending</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Disapproved">Disapproved</option>
+                </select>
+                <small class="form-text text-muted">This is managed by the admin.</small>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Add Art</button>
+        </div>
+    </form>
+</div>

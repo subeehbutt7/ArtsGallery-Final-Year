@@ -1,0 +1,121 @@
+@model IEnumerable<ArtGalleryFinal.Models.Artwork>
+
+@{
+	ViewData["Title"] = "Artworks";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+
+	// Lists sent by the controller (empty when this page is opened from Search)
+	var categories = ViewBag.Categories as List<ArtGalleryFinal.Models.ArtCategory> ?? new();
+	var artists = ViewBag.Artists as List<ArtGalleryFinal.Models.Artist> ?? new();
+	var wishIds = ViewBag.WishIds as List<int> ?? new();
+	var isCustomer = Context.Session.GetString("CustomerId") != null;
+	var backUrl = Context.Request.Path.Value + Context.Request.QueryString.Value;
+}
+
+<div class="container mt-5">
+	<h1 class="text-center mb-4">Artworks</h1>
+
+	@if (TempData["Error"] != null)
+	{
+		<div class="alert alert-danger text-center">@TempData["Error"]</div>
+	}
+	@if (TempData["Message"] != null)
+	{
+		<div class="alert alert-success text-center">@TempData["Message"]</div>
+	}
+
+	<!-- Filter + sort bar -->
+	<form method="get" action="/Artwork/Artworks" class="row g-2 mb-4">
+		<div class="col-md-3">
+			<select name="sort" class="form-select">
+				<option value="">Sort by price</option>
+				<option value="low" selected="@(Context.Request.Query["sort"] == "low")">Low to High</option>
+				<option value="high" selected="@(Context.Request.Query["sort"] == "high")">High to Low</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<select name="categoryId" class="form-select">
+				<option value="">All categories</option>
+				@foreach (var c in categories)
+				{
+					<option value="@c.CategoryId" selected="@(Context.Request.Query["categoryId"] == c.CategoryId.ToString())">@c.CategoryName</option>
+				}
+			</select>
+		</div>
+		<div class="col-md-3">
+			<select name="artistId" class="form-select">
+				<option value="">All artists</option>
+				@foreach (var a in artists)
+				{
+					<option value="@a.ArtistId" selected="@(Context.Request.Query["artistId"] == a.ArtistId.ToString())">@a.Name</option>
+				}
+			</select>
+		</div>
+		<div class="col-md-3 d-flex gap-2">
+			<button type="submit" class="btn btn-dark">Apply</button>
+			<a href="/Artwork/Artworks" class="btn btn-outline-secondary">Reset</a>
+		</div>
+	</form>
+
+	<div class="row">
+		@foreach (var artwork in Model)
+		{
+			var sold = artwork.IsSoldOut;
+			<div class="col-md-4 mb-4">
+				<!-- sold-card = greyed out and not clickable -->
+				<div class="card shadow-sm h-100 @(sold ? "sold-card" : "")">
+					<div class="position-relative">
+						@if (!string.IsNullOrEmpty(artwork.ImageUrl))
+						{
+							<!-- class "zoomable" = click the picture to open zoom in / zoom out -->
+							<img src="@artwork.ImageUrl" alt="@artwork.Title" class="card-img-top zoomable" style="height: 200px; object-fit: cover; cursor: zoom-in;">
+						}
+						else
+						{
+							<div class="card-img-top text-center bg-light" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+								<span class="text-muted">No Image</span>
+							</div>
+						}
+						<!-- Green = available, Red = sold out -->
+						<span class="badge status-badge @(sold ? "bg-danger" : "bg-success")">@(sold ? "Sold Out" : "Available")</span>
+					</div>
+
+					<div class="card-body text-center">
+						<h5 class="card-title">@artwork.Title</h5>
+						<p class="card-text text-primary mb-1">Price: RS @artwork.Price</p>
+						<p class="small text-muted">Quantity: @(artwork.Quantity ?? 1)</p>
+
+						@if (sold)
+						{
+							<button class="btn btn-secondary btn-sm" disabled>Sold Out</button>
+						}
+						else
+						{
+							<a class="btn btn-outline-dark btn-sm" href="/Artwork/ArtworkDetails/@artwork.ArtId">Details</a>
+							<form action="/Cart/AddToCart/@artwork.ArtId" method="post" class="d-inline">
+								@Html.AntiForgeryToken()
+								<button class="btn btn-primary btn-sm" type="submit">Add To Cart</button>
+							</form>
+						}
+
+						<button class="btn btn-info btn-sm" onclick="shareArtwork(@artwork.ArtId)">
+							<i class="fas fa-share-alt"></i> Share
+						</button>
+
+						@if (isCustomer)
+						{
+							<!-- Wishlist heart: filled = already saved -->
+							<form action="/Wishlist/Toggle/@artwork.ArtId" method="post" class="d-inline">
+								@Html.AntiForgeryToken()
+								<input type="hidden" name="back" value="@backUrl" />
+								<button class="btn btn-light btn-sm" type="submit" title="Wishlist">
+									<i class="@(wishIds.Contains(artwork.ArtId) ? "fas text-danger" : "far") fa-heart"></i>
+								</button>
+							</form>
+						}
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>

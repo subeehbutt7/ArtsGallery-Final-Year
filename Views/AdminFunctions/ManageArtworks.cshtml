@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ArtGalleryFinal.Models.ArtworkViewModel>
+
+@{
+	ViewData["Title"] = "Manage Artworks";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+	<h2 class="text-center mb-4">Manage Artworks</h2>
+	@if (Model != null && Model.Any())
+	{
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>ArtName</th>
+					<th>Artist Name</th>
+					<th>Image</th>
+					<th>Category Name</th>
+					<th>Status</th>
+					<th>Admin Approval</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var artwork in Model)
+				{
+					<tr>
+						<td>@artwork.Title </td>
+						<td>@artwork.Description  </td>
+						<td>@artwork.Price.ToString()</td>
+						<td>@artwork.ArtName</td>
+						<td>@artwork.ArtistName  </td>
+						<td>
+							@if (!string.IsNullOrEmpty(artwork.ImageUrl))
+							{
+								<img src="@artwork.ImageUrl" alt="Artwork Image" class="img-thumbnail" style="width: 100px;" />
+							}
+							else
+							{
+								<span>No Image</span>
+							}
+						</td>
+						<td>@artwork.CategoryName  </td>
+						<td>@artwork.Status  </td>
+						<td>@artwork.AdminApproved  </td>
+						<td>
+							@if (artwork.AdminApproved == "Pending")
+							{
+								<form action="/Admin/ApproveArtwork/ @artwork.ArtId" method="post">
+									@Html.AntiForgeryToken()
+									<button class="btn btn-primary btn-sm" type="submit">Approve</button>
+								</form>
+							}
+							<form action="/Admin/DisapproveArtwork/ @artwork.ArtId" method="post">
+								@Html.AntiForgeryToken()
+								<button class="btn btn-secondary btn-sm" type="submit">Disapprove</button>
+							</form>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	}
+	else
+	{
+		<div class="alert alert-warning text-center">
+			No artworks to display.
+		</div>
+	}
+</div>

@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Complaint";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5" style="max-width: 600px;">
+    <h1 class="text-center mb-4">Send a Complaint</h1>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+
+    <form method="post" action="/Complaint/Create">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="artId" value="@ViewBag.ArtId" />
+
+        @if (ViewBag.ArtId != null)
+        {
+            <p class="text-muted">Complaint about artwork #@ViewBag.ArtId</p>
+        }
+
+        <div class="mb-3">
+            <label for="message" class="form-label">Your complaint</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Tell us what went wrong..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit Complaint</button>
+        <a href="/Artwork/Artworks" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

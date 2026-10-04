@@ -1,0 +1,53 @@
+@model IEnumerable<ArtGalleryFinal.Models.Artwork>
+
+@{
+    ViewData["Title"] = "My Wishlist";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">My Wishlist</h1>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["Message"]</div>
+    }
+
+    @if (!Model.Any())
+    {
+        <p class="text-center text-muted">Your wishlist is empty. Tap the heart on any artwork to save it here.</p>
+    }
+
+    <div class="row">
+        @foreach (var art in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="position-relative">
+                        <img src="@art.ImageUrl" alt="@art.Title" class="card-img-top zoomable" style="height: 200px; object-fit: cover; cursor: zoom-in;">
+                        <span class="badge status-badge @(art.IsSoldOut ? "bg-danger" : "bg-success")">@(art.IsSoldOut ? "Sold Out" : "Available")</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@art.Title</h5>
+                        <p class="text-primary">Price: RS @art.Price</p>
+
+                        @if (art.IsSoldOut)
+                        {
+                            <button class="btn btn-secondary btn-sm" disabled>Sold Out</button>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-dark btn-sm" href="/Artwork/ArtworkDetails/@art.ArtId">Details</a>
+                        }
+
+                        <form action="/Wishlist/Toggle/@art.ArtId" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="back" value="/Wishlist/Index" />
+                            <button class="btn btn-outline-danger btn-sm" type="submit">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

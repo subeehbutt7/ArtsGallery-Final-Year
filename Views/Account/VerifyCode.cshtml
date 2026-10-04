@@ -1,0 +1,24 @@
+﻿@model ArtGalleryFinal.Models.VerifyCodeViewModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<h2>Verify Your Code</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<form action="/Account/VerifyCode" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="VerificationCode">Enter Verification Code</label>
+        <input name="VerificationCode" type="text" class="form-control" required />
+        <span asp-validation-for="VerificationCode" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Verify</button>
+</form>

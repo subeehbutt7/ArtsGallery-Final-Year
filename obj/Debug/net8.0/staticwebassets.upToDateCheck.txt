@@ -1,0 +1,83 @@
+wwwroot\css\site.css
+wwwroot\favicon.ico
+wwwroot\images\a6b54105-a95b-4515-8023-cdc500431aea.jpeg
+wwwroot\images\e81ef746-e63c-4200-9548-707b35b2a718.jpeg
+wwwroot\images\Painting 1.jpeg
+wwwroot\images\Painting 2.jpeg
+wwwroot\images\Painting 3.jpeg
+wwwroot\images\Painting 4.jpeg
+wwwroot\images\Painting 6.jpeg
+wwwroot\images\Painting 7.jpeg
+wwwroot\images\Painting 8.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.37 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.39 PM (1).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.39 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.40 PM (1).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.40 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.41 PM (1).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.41 PM (2).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.41 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.42 PM (1).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.42 PM (2).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.42 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.43 PM (1).jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.43 PM.jpeg
+wwwroot\images\WhatsApp Image 2026-10-01 at 1.48.44 PM.jpeg
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt

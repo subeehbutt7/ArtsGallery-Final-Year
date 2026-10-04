@@ -1,0 +1,26 @@
+﻿@model ArtGalleryFinal.Models.Artwork
+
+@{
+    ViewData["Title"] = "Artworks";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">@Model.Title</h1>
+    <div class="text-center">
+        <img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid zoomable" style="max-height: 400px; cursor: zoom-in;">
+    </div>
+    <p class="text-primary text-center">Price: RS @Model.Price</p>
+    <p class="text-muted text-center">Category: @(Model.Category?.CategoryName ?? "-")</p>
+    <p class="text-center">
+        <span class="badge @(Model.IsSoldOut ? "bg-danger" : "bg-success")">@(Model.IsSoldOut ? "Sold Out" : "Available")</span>
+    </p>
+    @if (!Model.IsSoldOut)
+    {
+        <p class="text-center"><a class="btn btn-dark btn-sm" href="/Artwork/ArtworkDetails/@Model.ArtId">View Details</a></p>
+    }
+    <div class="mt-3">
+        <h4>Description</h4>
+        <p>@Model.Description</p>
+    </div>
+</div>

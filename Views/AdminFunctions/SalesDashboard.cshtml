@@ -1,0 +1,94 @@
+@model ArtGalleryFinal.Models.SalesChartViewModel
+
+@{
+    ViewData["Title"] = "Sales Dashboard";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Sales Dashboard</h2>
+
+    <div class="row mb-4 text-center">
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <h5>Total Orders</h5>
+                <p class="fs-4 fw-bold">@Model.TotalOrders</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 border rounded">
+                <h5>Total Sales</h5>
+                <p class="fs-4 fw-bold">@Model.TotalSales</p>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.Months.Any())
+    {
+        <div class="text-center mb-3">
+            <button id="barBtn" class="btn btn-sm me-2 text-white" style="background-color:#3D1F34;">Bar Chart</button>
+            <button id="lineBtn" class="btn btn-sm text-white" style="background-color:#B5A9AF;">Line Chart</button>
+        </div>
+        <canvas id="salesChart" height="100"></canvas>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center">
+            No sales data to display yet.
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @if (Model.Months.Any())
+    {
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            var months = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Months));
+            var sales = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.SalesAmounts));
+
+            var ctx = document.getElementById('salesChart').getContext('2d');
+            var salesChart = null;
+
+            function renderChart(chartType) {
+                if (salesChart != null) {
+                    salesChart.destroy();
+                }
+                salesChart = new Chart(ctx, {
+                    type: chartType,
+                    data: {
+                        labels: months,
+                        datasets: [{
+                            label: 'Sales',
+                            data: sales,
+                            borderColor: 'rgba(99, 45, 80, 1)',
+                            backgroundColor: 'rgba(99, 45, 80, 0.5)',
+                            borderWidth: 1,
+                            fill: chartType === 'line'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+            }
+
+            document.getElementById('barBtn').addEventListener('click', function() {
+                renderChart('bar');
+                document.getElementById('barBtn').style.backgroundColor = '#3D1F34';
+                document.getElementById('lineBtn').style.backgroundColor = '#B5A9AF';
+            });
+
+            document.getElementById('lineBtn').addEventListener('click', function() {
+                renderChart('line');
+                document.getElementById('lineBtn').style.backgroundColor = '#632D50';
+                document.getElementById('barBtn').style.backgroundColor = '#B5A9AF';
+            });
+
+            renderChart('bar');
+        </script>
+    }
+}

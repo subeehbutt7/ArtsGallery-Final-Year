@@ -1,0 +1,157 @@
+﻿@model IEnumerable<ArtGalleryFinal.Models.OrderViewModel>
+
+@{
+	ViewData["Title"] = "My Orders";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+	var role = ViewBag.Role; // Retrieve role from ViewBag
+	var isArtist = role == "Artist";
+}
+
+<div class="container mt-5">
+	<h2 class="text-center mb-4">My Orders</h2>
+
+	@if (!Model.Any())
+	{
+		<div class="alert alert-info text-center">
+			You have no orders to display.
+		</div>
+	}
+	else
+	{
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Order ID</th>
+					<th>Order Number</th>
+					<th>Date</th>
+					<th>Order Amount</th>
+					<th>Discount</th>
+					<th>Art Name</th>
+					<th>Image</th>
+					<th>Quantity</th>
+					<th>Shipment Charges</th>
+					<th>Order Status</th>
+					<th>Total Amount</th>
+					@if (role == "Artist" || role == "Admin")
+					{
+						<th>Payment Status</th>
+					}
+					@if (role == "Artist")
+					{
+						<th>Action</th> <!-- Artist-specific column for managing shipment -->
+					}
+					@if (role == "Admin")
+					{
+						<th>Admin Actions</th>
+					}
+					@if (role == "Customer")
+					{
+						<th>Customer Actions</th>
+					}
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var order in Model)
+				{
+					<tr>
+						<td>@order.OrderId</td>
+						<td><strong>@order.OrderNumber</strong></td>
+						<td>@order.Date.ToString("dd-MM-yyyy")</td> <!-- Display Date in dd-MM-yyyy format -->
+						<td>@order.OrderAmount.ToString("C")</td> <!-- Format as currency -->
+						<td>@order.Discount.ToString("C")</td> <!-- Format as currency -->
+						<td>@order.ArtName</td>
+						<td>
+							<img src="@order.ImageUrl" alt="@order.ArtName" style="width: 100px; height: auto;" />
+						</td>
+						<td>@order.Quantity</td>
+						<td>@order.ShipmentCharges.ToString("C")</td> <!-- Format as currency -->
+						<td>@order.OrderStatus</td>
+						<td>@order.TotalAmount.ToString("C")</td>
+
+						<!-- Customer Actions -->
+						@if (role == "Customer")
+						{
+							<td>
+								@if (order.OrderStatus == "Delivered")
+								{
+									<a href="/Review/AddReview/@order.OrderId" class="btn btn-secondary btn-sm">
+										<i class="bi bi-star"></i> Add Rating/Review
+									</a>
+								}
+								@if (order.OrderStatus == "Pending")
+								{
+									<a href="/Order/EditOrder/@order.OrderId" class="btn btn-warning btn-sm">
+										<i class="bi bi-pencil-square"></i> Edit Order
+									</a>
+									<form action="/Order/CancelOrder" method="post" class="d-inline">
+										@Html.AntiForgeryToken()
+										<input type="hidden" name="OrderId" value="@order.OrderId" />
+										<button type="submit" class="btn btn-danger btn-sm">
+											<i class="bi bi-x-circle"></i> Cancel Order
+										</button>
+									</form>
+
+								}
+							</td>
+
+						}
+
+						<!-- Artist Actions -->
+						@if (role == "Artist")
+						{
+							<td>@order.PaymentStatus</td>
+							<td>
+								@if (order.OrderStatus == "Pending")
+								{
+									<form action="/Order/CancelOrder" method="post" class="d-inline">
+										@Html.AntiForgeryToken()
+										<input type="hidden" name="OrderId" value="@order.OrderId" />
+										<button type="submit" class="btn btn-danger btn-sm"
+										@if (order.OrderStatus == "Shipped")
+										{
+											<text>disabled</text>
+										}
+																title="Cannot cancel an order that is Shipped">
+																	Cancel Order
+																</button>
+									</form>
+								}
+							</td>
+						}
+
+						<!-- Admin Actions -->
+						@if (role == "Admin")
+						{
+							<td>@order.PaymentStatus</td>
+							<td>
+								@if (order.OrderStatus == "Pending")
+								{
+									<form action="/Order/UpdateOrderStatus" method="post" class="d-inline">
+										@Html.AntiForgeryToken()
+										<input type="hidden" name="OrderId" value="@order.OrderId" />
+										<input type="hidden" name="OrderStatus" value="Shipped" />
+										<button type="submit" class="btn btn-success btn-sm">Ship Order</button>
+									</form>
+								}
+
+								@if (order.OrderStatus == "Shipped")
+								{
+									<form action="/Order/UpdateOrderStatus" method="post" class="d-inline">
+										@Html.AntiForgeryToken()
+										<input type="hidden" name="OrderId" value="@order.OrderId" />
+										<input type="hidden" name="OrderStatus" value="Delivered" />
+										<button type="submit" class="btn btn-primary btn-sm">Mark as Delivered</button>
+									</form>
+								}
+
+
+							</td>
+						}
+					</tr>
+				}
+
+			</tbody>
+		</table>
+	}
+</div>
+

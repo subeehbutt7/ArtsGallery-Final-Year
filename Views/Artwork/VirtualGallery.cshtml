@@ -1,0 +1,80 @@
+@model IEnumerable<ArtGalleryFinal.Models.Artwork>
+
+@{
+    ViewData["Title"] = "Virtual Gallery";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+
+    var list = Model.ToList();
+    int count = list.Count;
+    // Radius of the circle so that the pictures sit side by side around it
+    int radius = count < 3 ? 250 : Math.Max(250, (int)(115 / Math.Tan(Math.PI / count)));
+}
+
+<div class="container mt-4">
+    <h1 class="text-center">Virtual Art Gallery - 360° View</h1>
+    <p class="text-center text-muted">Drag left / right (or use the arrows) to walk around the gallery. Click a picture to zoom.</p>
+
+    @if (count == 0)
+    {
+        <p class="text-center">No artworks to show yet.</p>
+    }
+    else
+    {
+        <div class="vg-stage" id="vgStage">
+            <div class="vg-ring" id="vgRing">
+                @for (int i = 0; i < count; i++)
+                {
+                    var art = list[i];
+                    <div class="vg-item @(art.IsSoldOut ? "sold-card" : "")" style="transform: rotateY(@(i * 360 / count)deg) translateZ(@(radius)px)">
+                        <img src="@art.ImageUrl" alt="@art.Title" class="@(art.IsSoldOut ? "" : "zoomable")" draggable="false">
+                        <div class="small mt-1">@art.Title - RS @art.Price</div>
+                        <span class="badge @(art.IsSoldOut ? "bg-danger" : "bg-success")">@(art.IsSoldOut ? "Sold Out" : "Available")</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button class="btn btn-dark" onclick="rot(angle + step)">◀ Left</button>
+            <button class="btn btn-outline-dark" onclick="toggleAuto()">Auto rotate</button>
+            <button class="btn btn-dark" onclick="rot(angle - step)">Right ▶</button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+@if (count > 0)
+{
+<script>
+    var radius = @radius, step = @(360 / Math.Max(count, 1)), angle = 0;
+    var ring = document.getElementById('vgRing'), stage = document.getElementById('vgStage');
+
+    // Turn the whole circle of pictures
+    function rot(a) { angle = a; ring.style.transform = 'translateZ(-' + radius + 'px) rotateY(' + angle + 'deg)'; }
+
+    // Drag with mouse / finger
+    var down = false, moved = false, lastX = 0;
+    stage.onpointerdown = function (e) { down = true; moved = false; lastX = e.clientX; };
+    window.addEventListener('pointermove', function (e) {
+        if (!down) return;
+        var dx = e.clientX - lastX;
+        if (Math.abs(dx) > 3) moved = true;
+        rot(angle + dx * 0.4);
+        lastX = e.clientX;
+    });
+    window.addEventListener('pointerup', function () { down = false; });
+
+    // After a drag, do not treat the release as a click (so the zoom does not open)
+    stage.addEventListener('click', function (e) { if (moved) { e.stopPropagation(); moved = false; } }, true);
+
+    // Auto rotate on / off
+    var timer = null;
+    function toggleAuto() {
+        if (timer) { clearInterval(timer); timer = null; }
+        else timer = setInterval(function () { rot(angle - 0.4); }, 30);
+    }
+
+    rot(0);
+</script>
+}
+}

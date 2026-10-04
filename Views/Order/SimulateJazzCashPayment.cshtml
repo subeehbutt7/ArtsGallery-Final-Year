@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    int orderId = ViewBag.OrderId;
+    string orderNumber = ViewBag.OrderNumber;
+    decimal amount = ViewBag.Amount;
+    string gateway = ViewBag.Gateway; // "JazzCash" or "Stripe"
+    string postAction = gateway == "Stripe" ? "/Order/SimulateStripePayment" : "/Order/SimulateJazzCashPayment";
+}
+
+<div class="container mt-5" style="max-width: 480px;">
+    <div class="card shadow-sm">
+        <div class="card-body text-center p-4">
+            <h3 class="mb-2">@gateway Payment</h3>
+            <span class="badge bg-warning text-dark mb-3">Sandbox Demo Mode</span>
+            <p class="text-muted small">
+                Real @gateway credentials abhi appsettings.json mein configure nahi hain, is liye demo
+                payment screen dikhayi ja rahi hai. Real account milne par yahan asli @gateway
+                checkout page open hoga.
+            </p>
+            <hr />
+            <p class="mb-1">Order #<strong>@orderNumber</strong></p>
+            <h4 class="mb-4">Rs. @amount</h4>
+
+            <form method="post" action="@postAction">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="orderId" value="@orderId" />
+                <button type="submit" name="result" value="success" class="btn btn-success w-100 mb-2">
+                    Simulate Successful Payment
+                </button>
+                <button type="submit" name="result" value="fail" class="btn btn-outline-danger w-100">
+                    Simulate Failed Payment
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

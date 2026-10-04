@@ -1,0 +1,145 @@
+@model ArtGalleryFinal.Models.ArtworkViewModel
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = Model.Title;
+    var customerId = HttpContextAccessor.HttpContext?.Session?.GetString("CustomerId");
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["WaText"] = "Hello, I want more details about this artwork: " + Model.Title; // used by the WhatsApp button in the layout
+    var backUrl = Context.Request.Path.Value + Context.Request.QueryString.Value;
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">@Model.Title</h1>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success text-center">@TempData["Message"]</div>
+    }
+
+    <!-- Large Artwork Image (click to zoom in / zoom out) -->
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid shadow-sm zoomable" style="max-height: 500px; object-fit: contain; cursor: zoom-in;">
+                <p class="small text-muted mt-1">Click the picture to zoom</p>
+            }
+            else
+            {
+                <div class="text-center bg-light p-5">
+                    <span class="text-muted">No Image Available</span>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Artwork Details -->
+    <div class="row mt-4">
+        <div class="col-md-8">
+            <h4>Details:</h4>
+            <p>
+                <strong>Status:</strong>
+                <span class="badge @(Model.IsSoldOut ? "bg-danger" : "bg-success")">@(Model.IsSoldOut ? "Sold Out" : "Available")</span>
+            </p>
+            <p><strong>Title:</strong> @Model.Title</p>
+            <p><strong>Name:</strong> @Model.ArtName</p>
+            <p><strong>Description:</strong> @Model.Description</p>
+            <p><strong>Category:</strong> @Model.CategoryName</p>
+            <p><strong>Price:</strong> RS @Model.Price</p>
+            <p><strong>Quantity available:</strong> @Model.Quantity</p>
+            <p><strong>Artist:</strong> @(Model.ArtistName ?? "Unknown")</p>
+
+            <div class="d-flex flex-wrap gap-2 mt-3">
+                @if (!string.IsNullOrEmpty(customerId))
+                {
+                    <form method="post" action="/Cart/AddToCart/@Model.ArtId">
+                        @Html.AntiForgeryToken()
+                        <button class="btn btn-primary" type="submit">Add to Cart</button>
+                    </form>
+                    <form method="post" action="/Wishlist/Toggle/@Model.ArtId">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="back" value="@backUrl" />
+                        <button class="btn btn-outline-danger" type="submit"><i class="far fa-heart"></i> Wishlist</button>
+                    </form>
+                }
+                else
+                {
+                    <p class="text-muted">Please register as a customer to order this artwork.</p>
+                }
+
+                <button class="btn btn-info" onclick="shareArtwork(@Model.ArtId)"><i class="fas fa-share-alt"></i> Share</button>
+                <button class="btn btn-dark" onclick="openWall()"><i class="fas fa-image"></i> View on Wall</button>
+                <a class="btn btn-outline-danger" href="/Complaint/Create?artId=@Model.ArtId"><i class="fas fa-exclamation-circle"></i> Complain</a>
+                <a class="btn btn-secondary" href="/Artwork/Artworks">Back to Artworks</a>
+            </div>
+            <p class="small text-muted mt-3"><i class="fab fa-whatsapp text-success"></i> For more details, use the green WhatsApp button at the bottom right.</p>
+        </div>
+    </div>
+
+    <!-- Ratings and Reviews Section -->
+    <div class="row mt-5">
+        <div class="col-md-8">
+            <h4>Ratings and Reviews:</h4>
+            @if (Model.Ratings != null && Model.Ratings.Any())
+            {
+                <p><strong>Average Rating:</strong> @Model.AverageRating/5</p>
+                <ul class="list-group">
+                    @foreach (var review in Model.Ratings)
+                    {
+                        <li class="list-group-item">
+                            <strong>CustomerName:</strong> @review.CustomerName <br />
+                            <strong>Rating:</strong> @review.RatingValue/5
+                            <p>@review.Review</p>
+                            <small>Date: @review.ReviewDate</small>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No ratings or reviews available for this artwork.</p>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- "View on Wall": the artwork hangs on a wall. Change size, wall colour, drag it, or use your own wall photo -->
+<div id="wallBox" class="wall-box" style="display:none">
+    <div class="wall-bar">
+        <label>Size <input type="range" id="wallSize" min="15" max="80" value="35"></label>
+        <button onclick="setWall('#efe6d8')">Cream</button>
+        <button onclick="setWall('#cfd8dc')">Grey</button>
+        <button onclick="setWall('#b7c9b2')">Green</button>
+        <label class="wall-upload">My wall photo <input type="file" id="wallPhoto" accept="image/*" hidden></label>
+        <button onclick="closeWall()">Close ✕</button>
+    </div>
+    <div id="wall" class="wall"><img id="wallArt" src="@Model.ImageUrl" alt="@Model.Title"></div>
+</div>
+
+@section Scripts {
+<script>
+    var boxEl = document.getElementById('wallBox'), wallEl = document.getElementById('wall'), artEl = document.getElementById('wallArt');
+    function openWall() { boxEl.style.display = 'block'; }
+    function closeWall() { boxEl.style.display = 'none'; }
+    function setWall(color) { wallEl.style.background = color; }
+
+    // Slider changes the picture size
+    document.getElementById('wallSize').oninput = function () { artEl.style.width = this.value + '%'; };
+
+    // Customer can upload a photo of their own wall
+    document.getElementById('wallPhoto').onchange = function () {
+        if (this.files[0]) wallEl.style.background = 'url(' + URL.createObjectURL(this.files[0]) + ') center/cover';
+    };
+
+    // Drag the picture anywhere on the wall
+    var dragging = false, offX = 0, offY = 0;
+    artEl.onpointerdown = function (e) { dragging = true; offX = e.clientX - artEl.offsetLeft; offY = e.clientY - artEl.offsetTop; e.preventDefault(); };
+    window.onpointermove = function (e) { if (dragging) { artEl.style.left = (e.clientX - offX) + 'px'; artEl.style.top = (e.clientY - offY) + 'px'; } };
+    window.onpointerup = function () { dragging = false; };
+</script>
+}

@@ -1,0 +1,40 @@
+﻿@model ArtGalleryFinal.Models.VerifyCodeViewModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Verify Your Email";
+}
+
+<div class="container mt-5" style="max-width: 480px;">
+    <h2 class="text-center mb-3">Verify Your Email</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">@TempData["Message"]</div>
+    }
+
+    <p class="text-muted text-center">
+        We've sent a 6-digit verification code to your email. Enter it below to activate your account.
+        Your account will not be created until you verify.
+    </p>
+
+    <form action="/Account/VerifyRegistration" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group mb-3">
+            <label asp-for="VerificationCode">Enter Verification Code</label>
+            <input name="VerificationCode" type="text" class="form-control" maxlength="6" required />
+            <span asp-validation-for="VerificationCode" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mb-2">Verify &amp; Create Account</button>
+    </form>
+
+    <form action="/Account/ResendRegistrationCode" method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-outline-secondary w-100">Resend Code</button>
+    </form>
+</div>

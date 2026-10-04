@@ -1,0 +1,361 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ArtGalleryFinal.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ArtGalleryFinal.yql6s45000.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 1.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 1.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 2.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 2.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 3.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 3.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 4.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 4.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 6.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 6.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 7.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 7.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\Painting 8.jpeg",
+      "PackagePath": "staticwebassets\\images\\Painting 8.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.37 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.37 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.39 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.39 PM (1).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.39 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.39 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.40 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.40 PM (1).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.40 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.40 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM (1).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM (2).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.41 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM (1).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM (2).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.42 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.43 PM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.43 PM (1).jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.43 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.43 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\WhatsApp Image 2026-10-01 at 1.48.44 PM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2026-10-01 at 1.48.44 PM.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\a6b54105-a95b-4515-8023-cdc500431aea.jpeg",
+      "PackagePath": "staticwebassets\\images\\a6b54105-a95b-4515-8023-cdc500431aea.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\images\\e81ef746-e63c-4200-9548-707b35b2a718.jpeg",
+      "PackagePath": "staticwebassets\\images\\e81ef746-e63c-4200-9548-707b35b2a718.jpeg"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Subeeh\\Project\\Complete Project\\ArtGalleryFinal_Full\\ArtGalleryFinal_Updated\\ArtGalleryFinal\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ArtGalleryFinal.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ArtGalleryFinal.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ArtGalleryFinal.props",
+      "PackagePath": "build\\ArtGalleryFinal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ArtGalleryFinal.props",
+      "PackagePath": "buildMultiTargeting\\ArtGalleryFinal.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ArtGalleryFinal.props",
+      "PackagePath": "buildTransitive\\ArtGalleryFinal.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

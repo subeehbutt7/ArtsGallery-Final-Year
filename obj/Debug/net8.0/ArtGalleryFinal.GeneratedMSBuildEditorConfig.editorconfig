@@ -1,0 +1,189 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ArtGalleryFinal
+build_property.RootNamespace = ArtGalleryFinal
+build_property.ProjectDir = D:\Subeeh\Project\Complete Project\ArtGalleryFinal_Full\ArtGalleryFinal_Updated\ArtGalleryFinal\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Subeeh\Project\Complete Project\ArtGalleryFinal_Full\ArtGalleryFinal_Updated\ArtGalleryFinal
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/VerifyCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Account/VerifyRegistration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/AdminEditArtistInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQWRtaW5FZGl0QXJ0aXN0SW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/AdminEditCustomerInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQWRtaW5FZGl0Q3VzdG9tZXJJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/Complaints.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcQ29tcGxhaW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/ManageAccounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcTWFuYWdlQWNjb3VudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/ManageArtworks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcTWFuYWdlQXJ0d29ya3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/AdminFunctions/SalesDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GdW5jdGlvbnNcU2FsZXNEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/ArtistFunctions/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0RnVuY3Rpb25zXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/ArtistFunctions/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0RnVuY3Rpb25zXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/AddArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xBZGRBcnR3b3JrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/ArtworkDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xBcnR3b3JrRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/Artworks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xBcnR3b3Jrcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/EditArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xFZGl0QXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/ManageMyArtworks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xNYW5hZ2VNeUFydHdvcmtzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/ViewArtwork.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xWaWV3QXJ0d29yay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Artwork/VirtualGallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0d29ya1xWaXJ0dWFsR2FsbGVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Cart/ViewCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxWaWV3Q2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Complaint/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/CustomerFunctions/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJGdW5jdGlvbnNcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/CustomerFunctions/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJGdW5jdGlvbnNcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Order/EditOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdE9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Order/PayWithJazzCash.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUGF5V2l0aEphenpDYXNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Order/SimulateJazzCashPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcU2ltdWxhdGVKYXp6Q2FzaFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Order/ViewMyOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcVmlld015T3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Review/AddReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XEFkZFJldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Search/SearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFNlYXJjaFJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Views/Wishlist/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lzaGxpc3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Subeeh/Project/Complete Project/ArtGalleryFinal_Full/ArtGalleryFinal_Updated/ArtGalleryFinal/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-apa2rbd7nb

@@ -1,0 +1,57 @@
+﻿@model ArtGalleryFinal.Models.ReviewViewModel
+@{
+    ViewBag.Title = "Add Review";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Add Review for @Model.Title</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+@* <form asp-action="SubmitReview" method="post"> *@
+ <form action="/Review/SubmitReview" method="post">
+    @Html.AntiForgeryToken()
+
+    <!-- Hidden fields to pass essential data -->
+    <input type="hidden" name="ArtId" value="@Model.ArtId" />
+    <input type="hidden" name="OrderId" value="@Model.OrderId" />
+    <input type="hidden" name="CustomerId" value="@Model.CustomerId" />
+
+    <!-- Display Customer Name -->
+    <div class="form-group">
+        <label asp-for="CustomerName">Customer Name</label>
+        <input class="form-control" name="CustomerName" value="@Model.CustomerName" readonly />
+    </div>
+
+    <!-- Rating dropdown for selecting values -->
+    <div class="form-group">
+        <label asp-for="RatingValue">Rating (1-5)</label>
+        <select id="RatingValue" name="RatingValue" class="form-control">
+            <option value=0 disabled selected>Select a rating</option>
+            <option value=1>1 - Poor</option>
+            <option value=2>2 - Fair</option>
+            <option value=3>3 - Good</option>
+            <option value=4>4 - Very Good</option>
+            <option value=5>5 - Excellent</option>
+        </select>
+        <span asp-validation-for="RatingValue" class="text-danger"></span>
+    </div>
+
+    <!-- Text area for adding reviews -->
+    <div class="form-group">
+        <label asp-for="Review">Review</label>
+        <textarea id="Review" name="Review" class="form-control"></textarea>
+        <span asp-validation-for="Review" class="text-danger"></span>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>

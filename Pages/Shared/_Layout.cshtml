@@ -1,0 +1,192 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ArtsGallery</title>
+    <script src="~/lib/jquery/dist/jquery.min.js" defer></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <!-- Navbar with brand on left, links next to it, right side pushed to the right -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-cream py-4 border-bottom border-accent">
+            <div class="container">
+                <!-- Brand (left-aligned) -->
+                <a class="navbar-brand fs-2 fw-bold text-dark me-4" asp-controller="Home" asp-action="Index">ArtsGallery</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Left navigation: Home, About – with gap between them -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-3" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-3" asp-controller="Home" asp-action="AboutUs">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-3" href="/Artwork/Artworks">Collection</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-3" href="/Artwork/VirtualGallery">Virtual Gallery</a>
+                        </li>
+                    </ul>
+
+                    <!-- Spacer to push search and user menus to the right -->
+                    <div class="flex-grow-1"></div>
+
+                    <!-- Search bar (only on non‑auth pages) -->
+                    @if ((string)ViewContext.RouteData.Values["Action"] != "Register" &&
+                        (string)ViewContext.RouteData.Values["Action"] != "Login")
+                    {
+                        <form class="d-flex me-4" method="get" action="/Search/SearchResult">
+                            <div class="input-group">
+                                <input class="form-control border-accent" type="text" name="query" placeholder="Search art..." required />
+                                <button class="btn btn-outline-dark" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </form>
+                    }
+
+                    <!-- Right side: user menus -->
+                    <ul class="navbar-nav gap-2">
+                        @if (HttpContextAccessor.HttpContext.Session.GetString("AdminId") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark px-3" href="#" id="adminPanelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Panel</a>
+                                <ul class="dropdown-menu" aria-labelledby="adminPanelDropdown">
+                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="ManageAccounts">Manage Accounts</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="ManageArtworks">Manage Artworks</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Admin" asp-action="SalesDashboard">Sales Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="/Admin/Complaints">Complaints</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Order" asp-action="ViewMyOrders"><i class="far fa-bell"></i></a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                        }
+                        else if (HttpContextAccessor.HttpContext.Session.GetString("ArtistId") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark px-3" href="#" id="artistPanelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Panel</a>
+                                <ul class="dropdown-menu" aria-labelledby="artistPanelDropdown">
+                                    <li><a class="dropdown-item" asp-controller="Artwork" asp-action="ManageMyArtworks">Manage My Art</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Artist" asp-action="Profile">Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Order" asp-action="ViewMyOrders"><i class="far fa-bell"></i></a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                        }
+                        else if (HttpContextAccessor.HttpContext.Session.GetString("CustomerId") != null)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark px-3" href="#" id="customerPanelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Panel</a>
+                                <ul class="dropdown-menu" aria-labelledby="customerPanelDropdown">
+                                    <li><a class="dropdown-item" asp-controller="Customer" asp-action="Profile">Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Order" asp-action="ViewMyOrders"><i class="far fa-bell"></i></a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" href="/Wishlist/Index" title="Wishlist"><i class="far fa-heart"></i></a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Cart" asp-action="ViewCart"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                        }
+                        else
+                        {
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Account" asp-action="Register">Register</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark px-3" asp-controller="Account" asp-action="Login">Login</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">@RenderBody()</main>
+    </div>
+
+    <!-- Premium dark footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="footer-logo mb-3">ArtsGallery</div>
+            <div class="mb-4">
+                <a asp-controller="Home" asp-action="Index" class="mx-3">Home</a>
+                <a asp-controller="Artwork" asp-action="Artworks" class="mx-3">Collection</a>
+                <a asp-controller="Home" asp-action="AboutUs" class="mx-3">About</a>
+                <a href="#" class="mx-3">Journal</a>
+                <a href="#" class="mx-3">Contact</a>
+                <a href="/Complaint/Create" class="mx-3">Complain</a>
+            </div>
+            <div class="mb-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-light small">&copy; 2026 ArtsGallery. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp button (change the number here: country code + number, no + or spaces) -->
+    @{
+        var waNumber = "923056294484";
+        var waText = (ViewData["WaText"] as string) ?? "Hello, I want more details about your artworks";
+    }
+    <a class="wa-float" target="_blank" href="https://wa.me/@waNumber?text=@Uri.EscapeDataString(waText)" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Zoom window: any <img class="zoomable"> opens here; + / - buttons or mouse wheel zoom, scroll to move around -->
+    <div id="zoomBox" class="zoom-box" style="display:none">
+        <div class="zoom-bar">
+            <button onclick="zoomBy(1.25)">＋ Zoom in</button>
+            <button onclick="zoomBy(0.8)">－ Zoom out</button>
+            <button onclick="zoomSet(80)">Reset</button>
+            <button onclick="zoomClose()">✕ Close</button>
+        </div>
+        <div class="zoom-scroll" id="zoomScroll"><img id="zoomImg" src="" alt="Zoomed artwork"></div>
+    </div>
+
+    <script>
+        // ----- Zoom in / zoom out -----
+        var zoomWidth = 80; // image width in % of the window
+        function zoomSet(w) {
+            zoomWidth = Math.max(20, Math.min(500, w));
+            document.getElementById('zoomImg').style.width = zoomWidth + '%';
+        }
+        function zoomBy(factor) { zoomSet(zoomWidth * factor); }
+        function zoomClose() { document.getElementById('zoomBox').style.display = 'none'; }
+
+        // Clicking any picture with class "zoomable" opens the zoom window
+        document.addEventListener('click', function (e) {
+            if (e.target.classList && e.target.classList.contains('zoomable')) {
+                document.getElementById('zoomImg').src = e.target.src;
+                zoomSet(80);
+                document.getElementById('zoomBox').style.display = 'block';
+            }
+        });
+        document.getElementById('zoomScroll').addEventListener('wheel', function (e) {
+            e.preventDefault();
+            zoomBy(e.deltaY < 0 ? 1.1 : 0.9);
+        }, { passive: false });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') zoomClose(); });
+
+        // ----- Share button (phones open the share sheet, PC shows the link to copy) -----
+        function shareArtwork(artId) {
+            var link = window.location.origin + '/Artwork/ViewArtwork?id=' + encodeURIComponent(artId);
+            if (navigator.share) navigator.share({ title: 'Artwork', text: 'Check out this artwork', url: link });
+            else prompt('Copy this link to share:', link);
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
