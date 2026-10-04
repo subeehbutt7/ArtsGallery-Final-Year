@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\0412043d-1dad-4351-add5-7ad7ff7aeae1.png" />
+    <Content Remove="wwwroot\images\04631ecc-51b1-41d4-801c-324e85aa5456.png" />
+    <Content Remove="wwwroot\images\251ba2db-2617-4308-ac56-d96843dc2c10.png" />
+    <Content Remove="wwwroot\images\356d3778-d9d9-4dcf-abcc-6f83ff8d3c09.png" />
+    <Content Remove="wwwroot\images\3a3047fb-90d6-4f5d-b022-c4ce54720769.png" />
+    <Content Remove="wwwroot\images\3afe7754-1d32-4793-b6a0-63db73f5a834.png" />
+    <Content Remove="wwwroot\images\3fbcc4e1-96d9-4b08-a506-8b5806029ebb.png" />
+    <Content Remove="wwwroot\images\48206bf9-6f81-4a1c-ba41-f7590c6d9e28.png" />
+    <Content Remove="wwwroot\images\50a35b25-ad16-4520-b4f4-eb7d19431721.png" />
+    <Content Remove="wwwroot\images\55bce8f7-3a40-42cc-869b-1336db5cdae6.png" />
+    <Content Remove="wwwroot\images\62ef78bf-ed23-4649-99e4-7c7c63ebf3ae.png" />
+    <Content Remove="wwwroot\images\77616e29-6491-4af7-a01c-bccd947e7b21.png" />
+    <Content Remove="wwwroot\images\8c2079ca-9154-4624-9649-5a86d314d70d.png" />
+    <Content Remove="wwwroot\images\8e5dde68-be16-42cc-b85d-02edcdfca6e4.png" />
+    <Content Remove="wwwroot\images\f9a5fa49-08c8-42b3-b3e0-a002cc742284.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="MailKit" Version="4.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Stripe.net" Version="52.1.0" />
+  </ItemGroup>
+
+</Project>
